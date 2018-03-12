@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar
+    android:id="@+id/toolbar"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/colorPrimary"
+    android:layout_height="wrap_content"
+    android:minHeight="?attr/actionBarSize">
+
+    <saddam.razon.themovie.utils.MyTextView
+        android:id="@+id/toolbar_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginRight="18dp"
+        android:text="@string/toolbar_default_text"
+        android:textSize="@dimen/text_size"
+        android:textColor="@color/textColor"
+        />
+
+</android.support.v7.widget.Toolbar>

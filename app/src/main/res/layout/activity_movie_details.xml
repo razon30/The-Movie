@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".view.activity.MovieDetailsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/layout_toolbar" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/cover"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/coverBG"
+                android:minHeight="230dp"
+                android:scaleType="fitXY" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:minHeight="230dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/trailer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/play" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/backgroundColor"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <saddam.razon.themovie.utils.MyTextView
+                                android:id="@+id/title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Inception"
+                                android:textColor="@color/textColor"
+                                android:textSize="@dimen/title_text_size" />
+
+                            <saddam.razon.themovie.utils.MyTextView
+                                android:id="@+id/year"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="(2010)"
+                                android:textColor="@color/textColor"
+                                android:textSize="@dimen/tab_text_size" />
+
+                        </LinearLayout>
+
+                        <saddam.razon.themovie.utils.MyTextView
+                            android:id="@+id/genre"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Crime, Mistry, Thriller"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/tab_text_size" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margintop"
+                        android:layout_marginTop="@dimen/margintop"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <saddam.razon.themovie.utils.MyTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:lineSpacingExtra="8dp"
+                                android:text="Rating"
+                                android:textColor="@color/textColor"
+                                android:textSize="@dimen/tab_text_size" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/rating" />
+
+                                <saddam.razon.themovie.utils.MyTextView
+                                    android:id="@+id/rating"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:lineSpacingExtra="8dp"
+                                    android:text="0"
+                                    android:textColor="@color/textColor"
+                                    android:textSize="@dimen/tab_text_size" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <saddam.razon.themovie.utils.MyTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:lineSpacingExtra="8dp"
+                                android:text="Awards"
+                                android:textColor="@color/textColor"
+                                android:textSize="@dimen/tab_text_size" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/awards" />
+
+                                <saddam.razon.themovie.utils.MyTextView
+                                    android:id="@+id/awards"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:lineSpacingExtra="8dp"
+                                    android:text="0"
+                                    android:textColor="@color/textColor"
+                                    android:textSize="@dimen/tab_text_size" />
+
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/movie_bg"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+
+            <saddam.razon.themovie.utils.MyTextView
+                android:id="@+id/overview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin"
+                android:lineSpacingExtra="8dp"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/tab_text_size" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="@dimen/margin"
+                android:layout_marginTop="@dimen/margin"
+                android:background="@color/textColor" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <saddam.razon.themovie.utils.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin"
+                            android:lineSpacingExtra="8dp"
+                            android:text="Production Company"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/tab_text_size" />
+
+                        <saddam.razon.themovie.utils.MyTextView
+                            android:id="@+id/production_company"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:lineSpacingExtra="8dp"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/text_size" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <saddam.razon.themovie.utils.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin"
+                            android:lineSpacingExtra="8dp"
+                            android:text="Production Country"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/tab_text_size" />
+
+                        <saddam.razon.themovie.utils.MyTextView
+                            android:id="@+id/production_country"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:lineSpacingExtra="8dp"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/text_size" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <saddam.razon.themovie.utils.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin"
+                            android:lineSpacingExtra="8dp"
+                            android:text="Budget"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/tab_text_size" />
+
+                        <saddam.razon.themovie.utils.MyTextView
+                            android:id="@+id/budget"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:lineSpacingExtra="8dp"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/text_size" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <saddam.razon.themovie.utils.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin"
+                            android:lineSpacingExtra="8dp"
+                            android:text="Language"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/tab_text_size" />
+
+                        <saddam.razon.themovie.utils.MyTextView
+                            android:id="@+id/language"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:lineSpacingExtra="8dp"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/text_size" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="@dimen/margin"
+                android:layout_marginTop="@dimen/margin"
+                android:background="@color/textColor" />
+
+            <LinearLayout
+                android:id="@+id/trailers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+
+                <saddam.razon.themovie.utils.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin"
+                    android:lineSpacingExtra="8dp"
+                    android:text="Trailers"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/text_size" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_tailers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <saddam.razon.themovie.utils.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin"
+                android:lineSpacingExtra="8dp"
+                android:text="Cast and Crews"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/text_size" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/cast_crew_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <saddam.razon.themovie.utils.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin"
+                android:lineSpacingExtra="8dp"
+                android:text="Similar Movies"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/text_size" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
