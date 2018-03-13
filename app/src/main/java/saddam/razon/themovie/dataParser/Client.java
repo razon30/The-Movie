@@ -17,6 +17,7 @@ import saddam.razon.themovie.model.Videos;
 
 public interface Client {
 
+
     @GET("upcoming")
     Observable<Movie> getUpcomingMovieList(@Query("api_key") String api_key, @Query("page") int page);
 
