@@ -49,8 +49,15 @@ public class MoviDetailsViewModel extends AndroidViewModel {
     public MoviDetailsViewModel(@NonNull Application application) {
         super(application);
         MyApplication.getMyApplication(application).getComponent().inject(this);
-        client = MyApplication.getMyApplication(application).getClient();
-        movieDetails = new MutableLiveData<>();
+
+        if (client == null){
+            client = MyApplication.getMyApplication(application).getClient();
+        }
+
+        if (movieDetails == null){
+            movieDetails = new MutableLiveData<>();
+        }
+
         similarMovies = new MutableLiveData<>();
         trailersList = new MutableLiveData<>();
         castCrewList = new MutableLiveData<>();

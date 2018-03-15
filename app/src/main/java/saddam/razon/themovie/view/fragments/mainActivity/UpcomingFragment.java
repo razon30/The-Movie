@@ -1,4 +1,4 @@
-package saddam.razon.themovie.view.fragments;
+package saddam.razon.themovie.view.fragments.mainActivity;
 
 
 import android.app.ProgressDialog;

@@ -17,28 +17,24 @@ import saddam.razon.themovie.model.Videos;
 
 public interface Client {
 
-
+    //movie list for main activity
     @GET("upcoming")
     Observable<Movie> getUpcomingMovieList(@Query("api_key") String api_key, @Query("page") int page);
-
     @GET("now_playing")
     Observable<Movie> getNewReleaseMovieListObservble(@Query("api_key") String api_key, @Query("page") int page);
-
     @GET("top_rated")
     Observable<Movie> getTopRatedMovieListObservble(@Query("api_key") String api_key, @Query("page") int page);
 
+
+    //movie details and related facts for movie details activity
     @GET("{movie_id}")
     Observable<MovieDetails> getMovieDetails(@Path("movie_id") String movie_id, @Query("api_key") String api_key);
-
     @GET("{movie_id}/similar")
     Observable<MovieSimilar> getSimilarMovies(@Path("movie_id") String movie_id, @Query("api_key") String api_key);
-
     @GET("{movie_id}/videos")
     Observable<Videos> getVideosMovies(@Path("movie_id") String movie_id, @Query("api_key") String api_key);
-
     @GET("{movie_id}/images")
     Observable<Images> getImagesMovies(@Path("movie_id") String movie_id, @Query("api_key") String api_key);
-
     @GET("{movie_id}/credits")
     Observable<CastCrew> getCastCrews(@Path("movie_id") String movie_id, @Query("api_key") String api_key);
 

@@ -1,0 +1,24 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/movie_bg"
+    tools:context="saddam.razon.themovie.view.fragments.movieDetails.CastCrewFragment">
+
+    <saddam.razon.themovie.utils.MyTextView
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin"
+        android:lineSpacingExtra="8dp"
+        android:text="Cast and Crews"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/text_size" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/cast_crew_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

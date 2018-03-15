@@ -1,4 +1,5 @@
-package saddam.razon.themovie.view.fragments;
+package saddam.razon.themovie.view.fragments.mainActivity;
+
 
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.Intent;
@@ -30,7 +31,7 @@ import saddam.razon.themovie.viewModel.MovieViewModel;
 
 
 @Module
-public class TopRatedFragment extends Fragment {
+public class NewReleaseFragment extends Fragment {
 
     RecyclerView recyclerView;
     @Inject
@@ -40,7 +41,6 @@ public class TopRatedFragment extends Fragment {
     GridLayoutManager layoutManager;
     AdapterMovieListRecycler adapter;
     int page = 1;
-
     private int lastPage;
 
     MovieViewModel viewModel;
@@ -110,7 +110,7 @@ public class TopRatedFragment extends Fragment {
         }
 
 
-        viewModel.getTopRatedMovies(pageNumber).observe(this, results -> {
+        viewModel.getNewReleaseMovies(pageNumber).observe(this, results -> {
 
             if (results != null) {
                 for (int i = 0; i < results.getResults().size(); i++) {
@@ -135,7 +135,9 @@ public class TopRatedFragment extends Fragment {
                 contentLoadingProgressbar.setVisibility(View.GONE);
             }
 
+
         });
+
     }
 
 
@@ -160,14 +162,13 @@ public class TopRatedFragment extends Fragment {
         MyApplication.getMyApplication(getActivity()).getComponent().inject(this);
     }
 
-
     @Inject
-    public TopRatedFragment() {
-        // Required empty public constructor
+    public NewReleaseFragment() {
+
     }
 
 
     private void initView(View view) {
-        contentLoadingProgressbar = (ContentLoadingProgressBar) view.findViewById(R.id.contentLoadingProgressbar);
+        contentLoadingProgressbar = view.findViewById(R.id.contentLoadingProgressbar);
     }
 }

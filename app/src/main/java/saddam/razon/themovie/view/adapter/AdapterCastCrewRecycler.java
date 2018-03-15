@@ -40,6 +40,8 @@ public class AdapterCastCrewRecycler extends RecyclerView.Adapter<AdapterCastCre
     @Override
     public void onBindViewHolder(HomeViewholder holder, int position) {
 
+        holder.play.setVisibility(View.GONE);
+
         String image = movieList.get(position).getImage();
         String url = Apis.IMAGE_BASE_API + image + "?api_key" + Apis.API_KEY;
       //  String trailerLink = "https://www.youtube.com/watch?v=" + movieList.get(position).getResult().getKey();
@@ -72,6 +74,7 @@ public class AdapterCastCrewRecycler extends RecyclerView.Adapter<AdapterCastCre
 
         public View rootView;
         public ImageView image;
+        public ImageView play;
         public MyTextView name;
         private CardView card;
 
@@ -79,6 +82,7 @@ public class AdapterCastCrewRecycler extends RecyclerView.Adapter<AdapterCastCre
             super(rootView);
             this.rootView = rootView;
             this.image = rootView.findViewById(R.id.image);
+            this.play = rootView.findViewById(R.id.play);
             this.name = rootView.findViewById(R.id.name);
             this.card = rootView.findViewById(R.id.card);
         }

@@ -13,9 +13,9 @@ import javax.inject.Inject;
 import saddam.razon.themovie.R;
 import saddam.razon.themovie.dataParser.Parser;
 import saddam.razon.themovie.utils.MyApplication;
-import saddam.razon.themovie.view.fragments.NewReleaseFragment;
-import saddam.razon.themovie.view.fragments.TopRatedFragment;
-import saddam.razon.themovie.view.fragments.UpcomingFragment;
+import saddam.razon.themovie.view.fragments.mainActivity.NewReleaseFragment;
+import saddam.razon.themovie.view.fragments.mainActivity.TopRatedFragment;
+import saddam.razon.themovie.view.fragments.mainActivity.UpcomingFragment;
 
 /**
  * Created by RAZON on 20-Jan-18.

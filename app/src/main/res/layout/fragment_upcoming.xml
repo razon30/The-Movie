@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/movie_bg"
     android:orientation="vertical"
-    tools:context=".view.fragments.UpcomingFragment">
+    tools:context=".view.fragments.mainActivity.UpcomingFragment">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycler"
